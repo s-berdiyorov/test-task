@@ -1,0 +1,37 @@
+Задача No1
+
+<?php 
+
+function isValidTriangle(int $a, int $b, int $c): bool {
+	if ($a + $b > $c && 
+		$b + $c > $a && 
+		$a + $c > $b && 
+		$a > 0 && $b > 0 &&
+		$c > 0 && $a < PHP_INT_MAX &&
+		$b < PHP_INT_MAX && $c < PHP_INT_MAX) 
+		return true;
+	else 
+		return false;
+}
+
+$a = 3;  
+$b = 4; 
+$c = 5; 
+
+if (isValidTriangle($a, $b, $c)) {
+	echo "Действительный треугольник";
+} else {
+	echo "Неверный треугольник";
+}
+
+?>
+
+Задача No2
+
+SELECT `user`.`name` AS user_name FROM `user` LEFT JOIN `post` USING(`user_id`) GROUP BY `user`.`user_id` ORDER BY COUNT(`post`.`post_id`) DESC LIMIT 10
+
+Задача No3
+
+<script type="text/javascript">
+	window.open("https://www.ya.ru/", "popup", "width=640,height=480");
+</script>
